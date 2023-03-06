@@ -1,0 +1,11 @@
+@mixin flexCenter(){
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+}
+
+@mixin borderColor($position,$color:#ccc,$width:1px,$style:solid){
+    border-#{$position}:$width ;
+    border-#{$position}-color: $color;
+    border-#{$position}-style: $style;
+}

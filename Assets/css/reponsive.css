@@ -1,0 +1,16 @@
+@media only screen and (min-width: 1024px) {
+  .header-navbar-list {
+    display: none;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .header-navbar-list {
+    display: none;
+  }
+}
+
+
+/*# sourceMappingURL=reponsive.css.map */

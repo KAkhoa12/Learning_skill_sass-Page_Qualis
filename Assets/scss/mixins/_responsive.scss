@@ -1,0 +1,139 @@
+@import './variables';
+
+$mobile-width: 480px; 
+$tablet-width: 768px; 
+$desktop-width: 1024px;  
+
+@mixin mobile { 
+    @media only screen and (max-width: #{$mobile-width - 1px}) {     
+        @content;   
+    } 
+}  
+
+@mixin tablet { 
+    @media only screen and (min-width: $tablet-width) and (max-width: #{$desktop-width - 1px}) {       
+        @content;   
+    } 
+}  
+
+@mixin desktop {  
+    @media only screen and (min-width: #{$desktop-width}) {     
+        @content;  
+    } 
+}
+@include desktop{
+    .header-navbar-list{
+        display: none ;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+}
+
+@include mobile{
+    .header-navbar-list{
+        display: none ;
+    }
+}
+
+@include tablet{
+    header{
+        height: 50vh;
+    }
+    .header-navbar{
+        position: relative;
+        .header-navbar-list{
+            position: absolute;
+            background-color: white;
+            top: 61px;
+            left: 0;
+            right: 0;
+            display: none;
+        }
+    }
+    .list-best{
+        .best-seller-item-img{
+            width: 200px;
+            height: 200px;
+            margin: 0 10px;
+        }
+
+    }
+    .best-seller-item{
+        width: 100%;
+        &-img{
+            width: 100%;
+            height: 143px;
+
+        }
+    }
+    .body-content{
+        padding-bottom: 0;
+        .user-logo{
+            transform: translateY(-100px);
+        }
+    }
+    .lastes-new-item-user{
+        flex-direction:column ;
+        align-items: start;
+        gap: 5px;
+        i{
+            color: $color-primary;
+        }
+    }
+    .sub-footer-content-intro{
+        width: 230px;
+        height: 240px;
+        border-radius: 40%;
+        img{
+            width: 100%;
+            height: 100px;
+        }
+    }
+    .sub-footer{
+        height: 750px;
+        .sub-footer-des{
+            padding-bottom: 10px;
+        }
+    }
+    .sub-footer-content-item{
+        width: 330px;
+        p{
+            width: 200px;
+        }
+    }
+    .sub-footer-contact{
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+        &-item{
+            padding: 20px 10px;
+        }
+        .sub-footer-contact-item-download{
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+        }
+
+    }
+    .footer-navbar{
+        padding-bottom: 0;
+        &-content{
+            padding-bottom: 70px;
+        }  
+    }  
+    .footer-socials{
+        &-list{
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+        .footer-payment{
+            img{
+                padding: 10px 10px 0 0;
+            }
+        }
+    }
+}
+
+
+
+

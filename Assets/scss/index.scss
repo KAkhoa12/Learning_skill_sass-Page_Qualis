@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+}
+
+body,html{
+    font-size: 62.5%;
+    background-color: #F5F5F5;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+@import './mixins/variables';
+@import './mixins/style';
+@import './components/header';
+@import './components/body';
+@import './components/sub-footer';
+@import './components/footer';
